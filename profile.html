@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="custom-header text-black text-center p-5">
+    <h1>E-Learning Platform</h1>
+</header>
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+
+    <div class="container d-flex justify-content-evenly">
+
+        <a class="nav-link text-black" href="dashboard.html">Dashboard</a>
+        <a class="nav-link text-black" href="courses.html">Courses</a>
+        <a class="nav-link text-black" href="quiz.html">Quiz</a>
+        <a class="nav-link text-black" href="profile.html">Profile</a>
+
+    </div>
+
+</nav>
+
+<main class="container mt-4">
+    <!-- Breadcrumb -->
+     <section class="breadcrumb">Home &gt; Profile</section>
+
+  <h3 class="text-center mb-4">My Profile</h3>
+
+  <div class="profile-card mx-auto">
+
+    <p><b>Name:</b> <span id="profileName"></span></p>
+    <p><b>Email:</b> <span id="profileEmail"></span></p>
+
+    <button class="btn btn-primary w-100 mt-3" onclick="enableEdit()">
+      Edit Profile
+    </button>
+
+    <!-- Edit Section -->
+    <div id="editSection" style="display:none;" class="mt-3">
+
+      <input type="text" id="editName" class="form-control mb-2" placeholder="Enter Name">
+      <input type="email" id="editEmail" class="form-control mb-2" placeholder="Enter Email">
+
+      <button class="btn btn-success w-100" onclick="saveProfile()">Save</button>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<main>
+    <!-- <section class="breadcrumb">Home &gt; Profile</section> -->
+    <section class="profile-box">
+
+  <h3>Profile</h3>
+
+  <label>Name:</label><br>
+  <input type="text" id="nameInput"><br><br>
+
+  <label>Email:</label><br>
+  <input type="email" id="emailInput"><br><br>
+
+  <button onclick="saveProfile()">Save Changes</button>
+
+</section>
+    <section class="profile-box">
+      <h2>Learner Profile</h2>
+
+      <h3>Completed Courses</h3>
+      <ul id="completedList"></ul>
+
+      <h3>Last Quiz Score</h3>
+      <p id="quizScore"></p>
+
+      <h3>Overall Progress</h3>
+      <progress id="profileProgress" max="100" value="0"></progress>
+    </section>
+  </main>
+
+<footer class="text-center mt-4 p-2 text-black custom-navbar">
+    © 2026 Multi-Page E-Learning Platform | Developed by Papagari Madhuri
+</footer>
+
+<script src="./js/courses.js"></script>
+<script src="./js/storage.js"></script>
+<script src="./js/script.js"></script>
+
+</body>
+</html>

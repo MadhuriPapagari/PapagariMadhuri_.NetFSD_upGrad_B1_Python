@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="custom-header text-black text-center p-5">
+    <h1>E-Learning Platform</h1>
+</header>
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+
+    <div class="container d-flex justify-content-evenly">
+
+        <a class="nav-link text-black" href="dashboard.html">Dashboard</a>
+        <a class="nav-link text-black" href="courses.html">Courses</a>
+        <a class="nav-link text-black" href="quiz.html">Quiz</a>
+        <a class="nav-link text-black" href="profile.html">Profile</a>
+
+    </div>
+
+</nav>
+
+  <main>
+    <section class="breadcrumb">Home &gt; Dashboard</section>
+
+    <section class="welcome-box">
+      <h2>Welcome 👋</h2>
+      <p class="quote">"Learning never exhausts the mind — it only ignites it."</p>
+    </section>
+
+    <section class="grid-container">
+      <div class="card">
+        <h3>Total Courses</h3>
+        <p id="total"></p>
+      </div>
+
+      <div class="card">
+        <h3>Completed</h3>
+        <p id="completed"></p>
+      </div>
+
+      <div class="card">
+        <h3>Progress</h3>
+        <progress id="progressBar" max="100" value="0"></progress>
+      </div>
+    </section>
+  </main>
+
+<footer class="text-center mt-4 p-2 text-black custom-navbar">
+    © 2026 Multi-Page E-Learning Platform | Developed by Papagari Madhuri
+</footer>
+
+<script src="./js/courses.js"></script>
+<script src="./js/storage.js"></script>
+<script src="./js/script.js"></script>
+
+</body>
+</html>

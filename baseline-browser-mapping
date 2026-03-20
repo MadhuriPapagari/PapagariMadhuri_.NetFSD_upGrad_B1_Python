@@ -1,0 +1,15 @@
+function getCompletedCourses() {
+  return JSON.parse(localStorage.getItem("completedCourses")) || [];
+}
+
+function saveCompletedCourses(data) {
+  localStorage.setItem("completedCourses", JSON.stringify(data));
+}
+
+function getQuizScore() {
+  return Number(localStorage.getItem("quizScore")) || 0;
+}
+
+function saveQuizScore(score) {
+  localStorage.setItem("quizScore", score);
+}
